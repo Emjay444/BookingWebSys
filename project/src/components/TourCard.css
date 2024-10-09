@@ -1,0 +1,16 @@
+.tour-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.tour-card:hover {
+    transform: scale(1.05);
+}
+
+h3 {
+    margin-top: 0;
+}
