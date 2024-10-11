@@ -10,13 +10,16 @@ const Navbar = () => {
       <h1>MASADYA Travel Tours</h1>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/">About</Link>
         </li>
         <li>
-          <Link to="/login">Login</Link>
+          <Link to="/">Travel Tips</Link>
         </li>
         <li>
-          <Link to="/register">Register</Link>
+          <Link to="/">Booking</Link>
+        </li>
+        <li>
+          <Link to="/">Profile</Link>
         </li>
       </ul>
     </nav>
