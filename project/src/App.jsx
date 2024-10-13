@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Header from "./components/Header"; // Import Header component
 import "./App.css"; // Ensure global styles are applied
 
+
 function App() {
   const location = useLocation(); // Get the current location from the router
 
