@@ -1,16 +1,23 @@
 /* src/components/Navbar.css */
 
 .navbar {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 15px; /* Padding around the navbar */
-    display: flex; /* Flexbox for layout */
-    justify-content: space-between; /* Space between items */
-    align-items: center; /* Center items vertically */
+  background-color: #000000; /* Black background */
+  color: white; /* White text */
+  padding: 10px; /* Padding around the navbar */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Center items vertically */
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align at the top */
+  left: 0; /* Align at the left */
+  width: 100%; /* Make the navbar full width */
+  z-index: 1000; /* Ensure the navbar is above other content */
   }
+
   
   .navbar h1 {
     margin: 0; /* Remove default margin */
+    font-size: 30px /* Make the header text smaller, adjust as needed */
   }
   
   .navbar ul {
@@ -18,6 +25,7 @@
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
     display: flex; /* Flexbox for horizontal layout */
+    margin-right: 15px;
   }
   
   .navbar li {
