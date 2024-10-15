@@ -1,8 +1,6 @@
 .home {
- 
-  
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-direction: column;
   margin: 0;
@@ -18,35 +16,35 @@
 h2 {
   margin-top: 40px;
 }
-.bodycard{
+.bodycard {
   display: flex;
   flex-direction: column;
   background-color: rgb(9, 9, 133);
   justify-content: center;
-  }
-  
-  .bodycard2 {
+}
+
+.bodycard2 {
   width: 250px;
   flex-direction: column;
   height: auto;
   margin: 10px;
   padding: 5px;
   background-color: rgb(19, 19, 199);
-  }
-  
-  .img{
+}
+
+.img {
   width: 250px;
   height: 250px;
   background-color: rgb(115, 115, 134);
-  }
-    .bodycard1 {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      justify-content: center;
-    }
-    .tour-grid{
-      display:flex;
-      flex-direction: row;
-      justify-content: center;
-    }
+}
+.bodycard1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.tour-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
