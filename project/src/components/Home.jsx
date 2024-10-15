@@ -79,40 +79,43 @@ const Home = () => {
   return (
     <div className="home">
       <Navbar />
-      <h2>Available Tours</h2>
-      <div className="tour-grid">
-        {tours.map((tour, index) => (
-          <TourCard key={index} tour={tour} />
-        ))}
-      </div>
 
       <div className="bodycard">
-        <h2>Top 5 Tourists Destinations</h2>
-        <div className="bodycard1">
-          <div className="bodycard2">
-            <label>El Nido, Palawan</label>
-            <div className="img" />
-            <p>Paragraph lorem ipsum</p>
-          </div>
-          <div className="bodycard2">
-            <label>El Nido, Palawan</label>
-            <div className="img" />
-            <p>Paragraph lorem ipsum</p>
-          </div>
-          <div className="bodycard2">
-            <label>El Nido, Palawan</label>
-            <div className="img" />
-            <p>Paragraph lorem ipsum</p>
-          </div>
-          <div className="bodycard2">
-            <label>El Nido, Palawan</label>
-            <div className="img" />
-            <p>Paragraph lorem ipsum</p>
-          </div>
-          <div className="bodycard2">
-            <label>El Nido, Palawan</label>
-            <div className="img" />
-            <p>Paragraph lorem ipsum</p>
+        <h2>Available Tours</h2>
+        <div className="tour-grid">
+          {tours.map((tour, index) => (
+            <TourCard key={index} tour={tour} />
+          ))}
+        </div>
+
+        <div className="bodycard10">
+          <h2 className="h22">Top 5 Tourists Destinations</h2>
+          <div className="bodycard1">
+            <div className="bodycard2">
+              <label>El Nido, Palawan</label>
+              <div className="img" />
+              <p>Paragraph lorem ipsum</p>
+            </div>
+            <div className="bodycard2">
+              <label>El Nido, Palawan</label>
+              <div className="img" />
+              <p>Paragraph lorem ipsum</p>
+            </div>
+            <div className="bodycard2">
+              <label>El Nido, Palawan</label>
+              <div className="img" />
+              <p>Paragraph lorem ipsum</p>
+            </div>
+            <div className="bodycard2">
+              <label>El Nido, Palawan</label>
+              <div className="img" />
+              <p>Paragraph lorem ipsum</p>
+            </div>
+            <div className="bodycard2">
+              <label>El Nido, Palawan</label>
+              <div className="img" />
+              <p>Paragraph lorem ipsum</p>
+            </div>
           </div>
         </div>
       </div>

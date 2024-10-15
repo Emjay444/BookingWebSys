@@ -5,7 +5,9 @@
   flex-direction: column;
   margin: 0;
 }
-
+body {
+  overflow-x: hidden;
+}
 .tour-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -16,27 +18,26 @@
 h2 {
   margin-top: 40px;
 }
+.h22 {
+  margin-left: 35px;
+}
 .bodycard {
   display: flex;
   flex-direction: column;
-  background-color: rgb(9, 9, 133);
+  background: linear-gradient(to bottom, #1f2f87, #0d1238);
   justify-content: center;
+  width: 100vw;
+  /* Full width of the viewport */
+  min-width: 100vw;
+  /* Prevent shrinking below viewport width */
+  margin: 0;
+  /* Remove any margins that could cause gaps */
+  padding: 0;
+  /* Ensure no padding creates gaps */
+  margin-top: 100vh;
+  padding-bottom: 50px;
 }
 
-.bodycard2 {
-  width: 250px;
-  flex-direction: column;
-  height: auto;
-  margin: 10px;
-  padding: 5px;
-  background-color: rgb(19, 19, 199);
-}
-
-.img {
-  width: 250px;
-  height: 250px;
-  background-color: rgb(115, 115, 134);
-}
 .bodycard1 {
   display: flex;
   flex-direction: row;
@@ -46,5 +47,59 @@ h2 {
 .tour-grid {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+}
+.bodycard2 {
+  width: 250px;
+  flex-direction: column;
+  height: auto;
+  margin: 10px;
+  padding: 5px;
+  background-color: #242d79;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bodycard2:hover {
+  transform: translateY(-10px) scale(1.05); /* Moves up and scales slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Adds shadow on hover */
+}
+
+.img {
+  width: 250px;
+  height: 250px;
+  background-color: rgb(115, 115, 134);
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.bodycard2:hover .img {
+  filter: brightness(0.8); /* Darkens the image on hover */
+  transform: scale(1); /* Slightly zooms in on hover */
+}
+
+.bodycard2 label {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bodycard2 p {
+  font-size: 14px;
+  color: #ccc;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bodycard10 {
+  width: 100%; /* Remove the fixed width */
+  max-width: 1450px; /* Maximum width for large screens */
+  margin: 0 auto; /* Centering */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
