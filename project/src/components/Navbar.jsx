@@ -7,7 +7,7 @@ import './Navbar.css'; // Ensure you create this CSS file for navbar styles
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h1>MASADYA Travel Tours</h1>
+      <h1>MASADYA Travel & Tours</h1>
       <ul>
         <li>
           <Link to="/">About</Link>
@@ -19,7 +19,7 @@ const Navbar = () => {
           <Link to="/">Booking</Link>
         </li>
         <li>
-          <Link to="/">Profile</Link>
+          <Link to="/Login">Login</Link>
         </li>
       </ul>
     </nav>

@@ -6,6 +6,14 @@
     color: #e0e0e0;
   }
   
+  .login-container h2 {
+    text-align: center; /* Center the h2 text */
+    margin-bottom: 20px; /* Space below the heading */
+    margin-top: 10px;
+    margin-left: 5px;
+    color: #e0e0e0; /* You can adjust the color if needed */
+  }
+
   .form-group {
     margin: 5px 0; /* Set margin to 5px to keep the fields close */
   }

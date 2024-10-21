@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "./Header"; // Import the Header component
 import "./Login.css"; // Ensure you have the correct CSS file for styles
 
+
 const Login = ({ onNavigateToRegister }) => {
   const [formData, setFormData] = useState({
     email: "",

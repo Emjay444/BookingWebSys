@@ -5,6 +5,7 @@
     transform: translateX(-50%); /* Offset to truly center it */
     text-align: center; /* Center the text */
     color: white; /* Ensure text is visible */
+    
   }
   
   .company-name {
