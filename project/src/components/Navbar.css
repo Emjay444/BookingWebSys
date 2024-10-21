@@ -17,9 +17,17 @@
   
   .navbar h1 {
     margin: 0; /* Remove default margin */
-    font-size: 30px /* Make the header text smaller, adjust as needed */
-  }
-  
+    font-size: 30px; /* Make the header text smaller, adjust as needed */
+    color: yellow; /* Change this to any color code you like */
+    background-image: '/assets/ ';
+}
+
+  .navbar h2{
+    margin: 0; /* Remove default margin */
+    font-size: 20px; /* Make the header text smaller, adjust as needed */
+    color: red; /* Change this to any color code you like */
+    text-align: left;
+}
   .navbar ul {
     list-style-type: none; /* Remove bullet points */
     margin: 0; /* Remove default margin */

@@ -10,6 +10,7 @@
 
 h2 {
   color: #ffffff; /* Lighter heading for contrast */
+  justify-items: center;
 }
 
 .form-group {

@@ -17,6 +17,7 @@ body {
 
 h2 {
   margin-top: 40px;
+  margin-left: 80px;
 }
 .h22 {
   margin-left: 35px;
@@ -24,7 +25,8 @@ h2 {
 .bodycard {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(to bottom, #1f2f87, #0d1238);
+  background: rgb(247,248,250);
+  background: radial-gradient(circle, rgba(247,248,250,1) 0%, rgba(7,130,193,1) 0%, rgba(59,74,163,1) 0%, rgba(34,50,151,1) 0%, rgba(0,19,136,0.829656862745098) 0%, rgba(57,58,60,0.7120098039215687) 100%);
   justify-content: center;
   width: 100vw;
   /* Full width of the viewport */
