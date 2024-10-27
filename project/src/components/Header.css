@@ -1,21 +1,16 @@
+/* Styling for the header section */
 .header-container {
-    position: absolute; /* Make the header absolute */
-    top: 80px; /* Adjust this value to position it below the shapes */
-    left: 50%; /* Center it horizontally */
-    transform: translateX(-50%); /* Offset to truly center it */
-    text-align: center; /* Center the text */
-    color: white; /* Ensure text is visible */
-    
-  }
-  
-  .company-name {
-    font-weight: bold;
-    color: yellow; /* Yellow color for MASADYA */
-    margin: 0; /* Remove margin for tight positioning */
-  }
-  
-  .sub-title {
-    color: red; /* Red color for Travel Tours */
-    margin: 0; /* Remove margin for tight positioning */
-  }
-  
+  margin-top: 130px; /* Adjust according to your navbar height */
+  display: flex; /* Enables flexbox */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically if needed */
+  height: auto; /* Adjust the height if you want to maintain the vertical centering */
+}
+
+.header-image {
+  width: 70%; /* Adjust the width as necessary */
+  height: auto;
+  max-height: 600px; /* Adjust this height */
+  object-fit: cover;
+  border-radius: 2%;
+}

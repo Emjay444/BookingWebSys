@@ -1,52 +1,76 @@
 /* src/components/Navbar.css */
-
 .navbar {
-  background-color: #000000; /* Black background */
-  color: white; /* White text */
-  padding: 10px; /* Padding around the navbar */
-  display: flex; /* Flexbox for layout */
-  justify-content: space-between; /* Space between items */
-  align-items: center; /* Center items vertically */
-  position: fixed; /* Fix the navbar at the top */
-  top: 0; /* Align at the top */
-  left: 0; /* Align at the left */
-  width: 100%; /* Make the navbar full width */
-  z-index: 1000; /* Ensure the navbar is above other content */
-  }
-
-  
-  .navbar h1 {
-    margin: 0; /* Remove default margin */
-    font-size: 30px; /* Make the header text smaller, adjust as needed */
-    color: yellow; /* Change this to any color code you like */
-    background-image: '/assets/ ';
+  background-color: #8eaccd;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-  .navbar h2{
-    margin: 0; /* Remove default margin */
-    font-size: 20px; /* Make the header text smaller, adjust as needed */
-    color: red; /* Change this to any color code you like */
-    text-align: left;
+.logo-container {
+  display: flex;
+  align-items: center;
 }
-  .navbar ul {
-    list-style-type: none; /* Remove bullet points */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Flexbox for horizontal layout */
-    margin-right: 15px;
-  }
-  
-  .navbar li {
-    margin: 0 15px; /* Margin between links */
-  }
-  
-  .navbar a {
-    color: white; /* Link color */
-    text-decoration: none; /* Remove underline from links */
-    font-weight: bold; /* Bold text */
-  }
-  
-  .navbar a:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
-  
+
+.logo {
+  height: 40px; /* Adjust size as needed */
+  margin-right: 10px;
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 30px;
+  color: yellow;
+}
+
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  margin-left: 400px;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #0b3f99;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.auth-links {
+  margin-left: auto;
+}
+
+.auth-links ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 25px;
+}
+
+.auth-links li {
+  margin-left: 15px;
+}
+
+.signup-btn {
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+}

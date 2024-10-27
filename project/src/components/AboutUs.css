@@ -1,0 +1,119 @@
+.about-us-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 300px 0;
+}
+
+/* Styles for the image container */
+.image-container {
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Enables overlapping with absolute positioning */
+    margin-right: 50px;
+    gap: 20px; /* Adds space between images */
+}
+
+/* Common styles for all image boxes */
+.image-box {
+    width: 200px;
+    height: 250px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #fff; /* White border */
+}
+
+/* Background images for individual image boxes */
+.image1 {
+    background-image: url('/src/assets/image1.jpg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        transform: translateY(-20px) translateX(-20px); /* Adjusts image1's placement */
+        border: 3px solid #fcf5f5; 
+}
+
+.image2 {
+    background-image: url('/src/assets/image2.jpg');
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    z-index: 2;
+    transform: translateY(-20px); /* Aligns with some overlap */
+    border: 3px solid #eeeded;
+}
+
+.image3 {
+    background-image: url('/src/assets/image3.jpg');
+    position: absolute;
+    top: 300px;
+    left: -20px;
+    z-index: 1;
+    border: 3px solid #faf8f8; 
+}
+
+/* About Us container on the right side */
+.about-us-container {
+    background-color: transparent;
+    padding: 50px;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(247, 245, 245, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-left: 500px;
+}
+
+.about-us-container h2 {
+    font-size: 2.5rem;
+    color: #faf9f9;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.about-us-container p {
+    font-size: 1.1rem;
+    color: #fefcfc;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-us-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container {
+        flex-direction: row;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+
+    .image-box {
+        margin: 0 10px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .about-us-container {
+        padding: 30px 15px;
+        margin: 0;
+    }
+
+    .about-us-container h2 {
+        font-size: 2rem;
+    }
+
+    .about-us-container p {
+        font-size: 1rem;
+    }
+}
