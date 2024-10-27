@@ -1,46 +1,116 @@
-import React, { useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+// App.js
+import React, { useState, useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
-import Header from "./components/Header"; // Import Header component
-import "./App.css"; // Ensure global styles are applied
-
+import Header from "./components/Header";
+import AboutUs from "./components/AboutUs"; // Import AboutUs
+import "./App.css";
 
 function App() {
-  const location = useLocation(); // Get the current location from the router
+  const location = useLocation();
+  const [travelers, setTravelers] = useState(1);
+  const [date, setDate] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [showControls, setShowControls] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 500) {
+        setShowControls(false);
+      } else {
+        setShowControls(location.pathname === "/");
+      }
+    };
+
+    setShowControls(location.pathname === "/");
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [location.pathname]);
 
   const handleNavigateToRegister = () => {
-    window.location.href = "/register"; // Navigate to register page
+    window.location.href = "/register";
   };
 
   const handleNavigateToLogin = () => {
-    window.location.href = "/login"; // Navigate to login page
+    window.location.href = "/login";
   };
 
   return (
     <div className="App">
-      {/* Only show shapes on login and register pages */}
-      {(location.pathname === "/login" || location.pathname === "/register") && (
+      {(location.pathname === "/login" ||
+        location.pathname === "/register") && (
         <div className="shape-container">
           <div className="shape red"></div>
           <div className="shape blue"></div>
           <div className="shape yellow"></div>
         </div>
       )}
-      <Header /> {/* Render Header component */}
+      <Header />
+      <AboutUs /> {/* Add the About Us section here */}
       <div className="login-wrapper">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login onNavigateToRegister={handleNavigateToRegister} />} />
-          <Route path="/register" element={<Register onNavigateToLogin={handleNavigateToLogin} />} />
+          <Route
+            path="/login"
+            element={<Login onNavigateToRegister={handleNavigateToRegister} />}
+          />
+          <Route
+            path="/register"
+            element={<Register onNavigateToLogin={handleNavigateToLogin} />}
+          />
         </Routes>
       </div>
+      {showControls && (
+        <div className="controls-container">
+          <div className="control-group">
+            <label htmlFor="travelers-select">Travelers</label>
+            <select
+              id="travelers-select"
+              value={travelers}
+              onChange={(e) => setTravelers(e.target.value)}
+            >
+              {[...Array(10).keys()].map((num) => (
+                <option key={num} value={num + 1}>
+                  {num + 1} Traveler{num > 0 ? "s" : ""}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className="control-group">
+            <label htmlFor="date-select">Select Date</label>
+            <input
+              type="date"
+              id="date-select"
+              value={date}
+              onChange={(e) => setDate(e.target.value)}
+            />
+          </div>
+          <div className="control-group">
+            <label htmlFor="location-select">Select Location</label>
+            <input
+              type="text"
+              id="location-select"
+              placeholder="Enter location"
+              value={selectedLocation}
+              onChange={(e) => setSelectedLocation(e.target.value)}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
-// Wrap App with Router in index.js or main file
 const AppWithRouter = () => (
   <Router>
     <App />

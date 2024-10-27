@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-import Header from "./Header"; // Import the Header component
-import "./Login.css"; // Ensure you have the correct CSS file for styles
+// src/components/Login.jsx
 
+import React, { useState } from "react";
+import './Login.css'; // Correct import for the CSS file
+import Header from './Header'; // Import the Header component
 
 const Login = ({ onNavigateToRegister }) => {
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const [formData, setFormData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -16,16 +14,15 @@ const Login = ({ onNavigateToRegister }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add your login logic here
     console.log("Logged in:", formData);
   };
 
   return (
     <div className="login-container">
-      <Header /> {/* Include the Header here */}
+      <Header showImage={false} /> {/* Explicitly pass showImage={false} */}
       <h2>Login</h2>
       {error && <div className="error">{error}</div>}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="login-form">
         <div className="form-group">
           <label htmlFor="email">Email:</label>
           <input
@@ -54,8 +51,8 @@ const Login = ({ onNavigateToRegister }) => {
         Create an account?{" "}
         <span
           className="register-link"
-          onClick={onNavigateToRegister} // Call the function to navigate
-          style={{ cursor: "pointer", color: "#4CAF50" }} // Ensure it looks like a link
+          onClick={onNavigateToRegister}
+          style={{ cursor: "pointer", color: "#4CAF50" }}
         >
           Register Here
         </span>
