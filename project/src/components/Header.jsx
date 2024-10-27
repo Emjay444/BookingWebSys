@@ -1,15 +1,21 @@
+// src/components/Header.jsx
 import React from "react";
-import "./Header.css"; // Ensure this CSS file exists for styling
+import Rizal_Monumentum from "../assets/Rizal_Monumentum.png"; // Import the image
+import "./Header.css";
 
-const Header = () => {
+const Header = ({ showImage = true }) => {
   return (
     <div className="header-container">
-      <h1 className="company-name"></h1>
-      <h2 className="sub-title"></h2>
+      {/* Conditionally render the image based on the showImage prop */}
+      {showImage && (
+        <img
+          src={Rizal_Monumentum}
+          alt="Rizal Monument"
+          className="header-image"
+        />
+      )}
     </div>
   );
 };
-
-
 
 export default Header;

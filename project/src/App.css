@@ -1,13 +1,15 @@
 /* Dark mode background with an image */
-html, body, #root, .App {
+html,
+body,
+#root,
+.App {
   height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column; /* Stack elements vertically */
   justify-content: flex-start; /* Align items to the top */
-  background: url('./assets/Rizal_Monumentum.png') no-repeat center center fixed;
+  background: url("./assets/background.png") no-repeat center center fixed;
   background-size: cover;
-  color: #e0e0e0;
 }
 
 /* Styling for the shape container */
@@ -77,7 +79,7 @@ input {
 button {
   width: calc(100% - 16px); /* Full width minus padding */
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   border-radius: 5px;
@@ -93,3 +95,82 @@ button:hover {
   color: #ff6b6b; /* Bright color for error message */
   margin-bottom: 10px;
 }
+.controls-container {
+  position: fixed; /* Fixes the controls to the viewport */
+  bottom: 20px; /* Distance from the bottom of the viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 24px;
+  background: linear-gradient(145deg, #222, #333);
+  padding: 16px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1000; /* Ensures it stays above other elements */
+  transition: box-shadow 0.3s ease;
+}
+
+.controls-container:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Control Group Styling */
+.control-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.control-group label {
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+}
+
+.control-group input,
+.control-group select {
+  width: 240px;
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: #444;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Add a subtle shadow and focus effect */
+.control-group input:focus,
+.control-group select:focus {
+  border-color: #74b9ff;
+  box-shadow: 0 0 6px rgba(116, 185, 255, 0.5);
+  outline: none;
+}
+
+/* Customize dropdown arrow for select */
+.control-group select {
+  appearance: none; /* Remove default arrow */
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Add a placeholder icon for date input */
+.control-group input[type="date"] {
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .controls-container {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .control-group input,
+  .control-group select {
+    width: 100%;
+  }
+}
+
