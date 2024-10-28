@@ -3,6 +3,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import TourCard from "./TourCard";
+import Card from "./Card";
 import "./Home.css"; // Ensure you create this CSS file for home styles
 
 const Home = () => {
@@ -30,49 +31,6 @@ const Home = () => {
       startTime: "8:00 AM",
       duration: "4 hours",
       image: "path/to/image3.jpg",
-    },
-  ];
-
-  const additionalTours = [
-    {
-      title: "Desert Safari",
-      description: "Experience the dunes in a thrilling desert safari.",
-      price: 200,
-      startTime: "4:00 PM",
-      duration: "6 hours",
-      image: "path/to/image4.jpg",
-    },
-    {
-      title: "Jungle Expedition",
-      description: "Immerse yourself in a guided jungle expedition.",
-      price: 180,
-      startTime: "7:00 AM",
-      duration: "8 hours",
-      image: "path/to/image5.jpg",
-    },
-    {
-      title: "Waterfall Hike",
-      description: "A refreshing hike to a beautiful waterfall.",
-      price: 130,
-      startTime: "11:00 AM",
-      duration: "4 hours",
-      image: "path/to/image6.jpg",
-    },
-    {
-      title: "City Night Tour",
-      description: "Discover the beauty of the city at night.",
-      price: 120,
-      startTime: "8:00 PM",
-      duration: "3 hours",
-      image: "path/to/image7.jpg",
-    },
-    {
-      title: "Boat Cruise",
-      description: "Enjoy a luxurious boat cruise.",
-      price: 250,
-      startTime: "12:00 PM",
-      duration: "5 hours",
-      image: "path/to/image8.jpg",
     },
   ];
 
