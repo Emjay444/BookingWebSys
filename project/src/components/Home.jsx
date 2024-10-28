@@ -16,7 +16,8 @@ const Home = () => {
       price: 99,
       startTime: "9:00 AM",
       duration: "3 hours",
-      image: "https://via.placeholder.com/150",
+      image:
+        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMayon&psig=AOvVaw1yXRr8x6tYManwtL_mvUDz&ust=1730217720515000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLD08bq5sYkDFQAAAAAdAAAAABAE",
     },
     {
       title: "Beach Getaway",
