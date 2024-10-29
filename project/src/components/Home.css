@@ -13,10 +13,17 @@ body {
   overflow-x: hidden;
 }
 .tour-grid {
-  display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+  overflow-x: auto;
+  display: flex;
+  justify-self: center;
+  align-self: center;
   margin-bottom: 40px;
+  padding: 20px;
+  padding-left: 50px;
+  width: 90%;
+  scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
 h2 {
@@ -29,16 +36,7 @@ h2 {
 .bodycard {
   display: flex;
   flex-direction: column;
-  background: rgb(247, 248, 250);
-  background: radial-gradient(
-    circle,
-    rgba(247, 248, 250, 1) 0%,
-    rgba(7, 130, 193, 1) 0%,
-    rgba(59, 74, 163, 1) 0%,
-    rgba(34, 50, 151, 1) 0%,
-    rgba(0, 19, 136, 0.829656862745098) 0%,
-    rgba(57, 58, 60, 0.7120098039215687) 100%
-  );
+
   justify-content: center;
   width: 100vw;
   /* Full width of the viewport */
@@ -52,12 +50,75 @@ h2 {
   padding-bottom: 50px;
 }
 
+/* Container for the recently viewed section */
 .bodycard1 {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+  scroll-behavior: smooth; /* Smooth scrolling effect */
 }
+
+/* Custom scrollbar styling */
+.bodycard1::-webkit-scrollbar,
+.tour-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bodycard1::-webkit-scrollbar-thumb,
+.tour-grid::-webkit-scrollbar-thumb {
+  background: rgb(176, 181, 211);
+
+  border-radius: 10px;
+}
+
+.bodycard1::-webkit-scrollbar-track,
+.tour-grid::-webkit-scrollbar-track {
+  background: #f1f1f143;
+  border-radius: 10px;
+}
+
+/* Styling for individual recently viewed cards */
+.recently-viewed-card {
+  min-width: 180px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recently-viewed-card:hover {
+  transform: scale(1.05); /* Smooth scaling on hover */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Image styling inside the cards */
+.recently-viewed-card .img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Optional: Add some breathing room between cards */
+.bodycard1::-webkit-scrollbar,
+.tour-grid::-webkit-scrollbar {
+  height: 8px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .recently-viewed-card {
+    min-width: 140px; /* Adjust card size for smaller screens */
+  }
+}
+
 .tour-grid {
   display: flex;
   flex-direction: row;
@@ -71,7 +132,6 @@ h2 {
   padding: 5px;
   background-color: #242d79;
   border-radius: 8px;
-  overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -116,4 +176,37 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/* Popup styling */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
