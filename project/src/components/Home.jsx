@@ -16,8 +16,7 @@ const Home = () => {
       price: 99,
       startTime: "9:00 AM",
       duration: "3 hours",
-      image:
-        "https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FMayon&psig=AOvVaw1yXRr8x6tYManwtL_mvUDz&ust=1730217720515000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLD08bq5sYkDFQAAAAAdAAAAABAE",
+      image: "https://via.placeholder.com/150",
     },
     {
       title: "Beach Getaway",
@@ -35,46 +34,17 @@ const Home = () => {
       duration: "4 hours",
       image: "https://via.placeholder.com/150",
     },
-    {
-      title: "Mountassin Adventure",
-      description: "Hike through the stunning mountains.",
-      price: 120,
-      startTime: "8:00 AM",
-      duration: "4 hours",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      title: "XXMountassin Adventure",
-      description: "Hike through the stunning mountains.",
-      price: 120,
-      startTime: "8:00 AM",
-      duration: "4 hours",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      title: "ZZXXMountassin Adventure",
-      description: "Hike through the stunning mountains.",
-      price: 120,
-      startTime: "8:00 AM",
-      duration: "4 hours",
-      image: "https://via.placeholder.com/150",
-    },
-    {
-      title: "ZZXXMountassin Adventure",
-      description: "Hike through the stunning mountains.",
-      price: 120,
-      startTime: "8:00 AM",
-      duration: "4 hours",
-      image: "https://via.placeholder.com/150",
-    },
   ];
 
   const handleCardClick = (tour) => {
     setSelectedTour(tour);
 
-    // Update recently viewed list
+    // Update recently viewed list and limit to 4 unique items
     setRecentlyViewed((prev) => {
-      const updatedList = [tour, ...prev.filter((t) => t.title !== tour.title)];
+      const updatedList = [
+        tour,
+        ...prev.filter((t) => t.title !== tour.title),
+      ].slice(0, 4);
       localStorage.setItem("recentlyViewed", JSON.stringify(updatedList));
       return updatedList;
     });
@@ -86,8 +56,9 @@ const Home = () => {
       setRecentlyViewed(JSON.parse(storedRecentlyViewed));
     }
   }, []);
+
   const closePopup = () => {
-    setSelectedTour(null); // Close the popup
+    setSelectedTour(null);
   };
 
   return (
@@ -124,16 +95,16 @@ const Home = () => {
 
         <div className="bodycard10">
           <h2 className="h22">Recently Viewed Destinations</h2>
-          <div className="bodycard1">
+          <div className="tour-grid recently-viewed">
             {recentlyViewed.length === 0 ? (
               <p>No recent views yet</p>
             ) : (
               recentlyViewed.map((tour, index) => (
-                <div key={index} className="bodycard2">
-                  <label>{tour.title}</label>
-                  <img src={tour.image} alt={tour.title} className="img" />
-                  <p>{tour.description}</p>
-                </div>
+                <TourCard
+                  key={index}
+                  tour={tour}
+                  onClick={() => handleCardClick(tour)}
+                />
               ))
             )}
           </div>
