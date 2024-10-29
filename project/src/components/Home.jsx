@@ -2,8 +2,10 @@
 
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
-import TourCard from "./TourCard";
+import TourCard from "./TourCard";n
 import "./Home.css";
+import Card from "./Card";
+import "./Home.css"; // Ensure you create this CSS file for home styles
 
 const Home = () => {
   const [selectedTour, setSelectedTour] = useState(null);
@@ -89,6 +91,10 @@ const Home = () => {
   const closePopup = () => {
     setSelectedTour(null); // Close the popup
   };
+
+      image: "path/to/image3.jpg",
+    },
+  ];
 
   return (
     <div className="home">
