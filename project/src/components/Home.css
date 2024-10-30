@@ -35,17 +35,11 @@ h2 {
 .bodycard {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   width: 100vw;
-  /* Full width of the viewport */
   min-width: 100vw;
-  /* Prevent shrinking below viewport width */
-  margin: 0;
-  /* Remove any margins that could cause gaps */
+  margin: 0; /* Set to 0 to remove gaps */
   padding: 0;
-  /* Ensure no padding creates gaps */
-  margin-top: 100vh;
   padding-bottom: 50px;
 }
 
