@@ -10,7 +10,6 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
 import Header from "./components/Header";
-import AboutUs from "./components/AboutUs"; // Import AboutUs
 import "./App.css";
 
 function App() {
@@ -56,7 +55,7 @@ function App() {
         </div>
       )}
       <Header />
-      <AboutUs /> {/* Add the About Us section here */}
+
       <div className="login-wrapper">
         <Routes>
           <Route path="/" element={<Home />} />

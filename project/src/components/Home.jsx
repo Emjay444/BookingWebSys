@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import TourCard from "./TourCard";
+import AboutUs from "./AboutUs"; // Import the AboutUs component
 import "./Home.css";
 
 const Home = () => {
@@ -76,6 +77,9 @@ const Home = () => {
             />
           ))}
         </div>
+
+        {/* About Us Section */}
+        <AboutUs />
 
         {selectedTour && (
           <div className="popup">
